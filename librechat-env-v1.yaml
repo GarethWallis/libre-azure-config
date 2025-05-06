@@ -1,6 +1,7 @@
 endpoints:
   azureOpenAI:
     titleModel: "gpt-4.1"
+    titleConvo: true
     plugins: true
     groups:
       - group: "my-eastaus"
@@ -10,3 +11,5 @@ endpoints:
         models:
           gpt-4.1:
             deploymentName: gpt-4.1
+          o3-mini:
+            deploymentName: o3-mini
