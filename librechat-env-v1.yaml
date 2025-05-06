@@ -1,0 +1,39 @@
+endpoints:
+  azureOpenAI:
+    # Endpoint-level configuration
+    titleModel: "llama-70b-chat"
+    plugins: true
+    assistants: true
+    groups:
+    # Group-level configuration
+    - group: "my-resource-westus"
+      apiKey: "${WESTUS_API_KEY}"
+      instanceName: "my-resource-westus"
+      version: "2024-03-01-preview"
+      # Model-level configuration
+      models:
+        gpt-4-vision-preview:
+          deploymentName: gpt-4-vision-preview
+          version: "2024-03-01-preview"
+        gpt-3.5-turbo:
+          deploymentName: gpt-35-turbo
+        gpt-4-1106-preview:
+          deploymentName: gpt-4-1106-preview
+    # Group-level configuration
+    - group: "mistral-inference"
+      apiKey: "${AZURE_MISTRAL_API_KEY}"
+      baseURL: "https://Mistral-large-vnpet-serverless.region.inference.ai.azure.com/v1/chat/completions"
+      serverless: true
+      # Model-level configuration
+      models:
+        mistral-large: true
+    # Group-level configuration
+    - group: "my-resource-sweden"
+      apiKey: "${SWEDEN_API_KEY}"
+      instanceName: "my-resource-sweden"
+      deploymentName: gpt-4-1106-preview
+      version: "2024-03-01-preview"
+      assistants: true
+      # Model-level configuration
+      models:
+        gpt-4-turbo: true
