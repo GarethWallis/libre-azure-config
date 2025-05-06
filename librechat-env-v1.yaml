@@ -9,6 +9,7 @@ endpoints:
         instanceName: "${AZURE_API_INSTANCE_V1}"
         version: "2024-12-01-preview"
         baseURL: "https://${AZURE_API_INSTANCE_V1}.cognitiveservices.azure.com/"
+        endpointCompletionsPath: "/openai/deployments/{deployment}/chat/completions"
         models:
           gpt-4.1:
             deploymentName: gpt-4.1
