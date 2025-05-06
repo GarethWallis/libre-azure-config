@@ -13,5 +13,6 @@ endpoints:
         models:
           gpt-4.1:
             deploymentName: gpt-4.1
+            version: "2025-04-14"
           o3-mini:
             deploymentName: o3-mini
