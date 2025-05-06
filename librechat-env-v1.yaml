@@ -1,18 +1,13 @@
 endpoints:
   azureOpenAI:
-    titleModel: "gpt-4.1"
-    titleConvo: true
-    plugins: true
     groups:
-      - group: "my-eastaus"
-        apiKey: "${AZURE_API_KEY_v1}"
-        instanceName: "${AZURE_API_INSTANCE_V1}"
-        version: "2024-12-01-preview"
-        baseURL: "https://${AZURE_API_INSTANCE_V1}.cognitiveservices.azure.com/"
-        endpointCompletionsPath: "/openai/deployments/{deployment}/chat/completions"
-        models:
-          gpt-4.1:
-            deploymentName: gpt-4.1
-            version: "2025-04-14"
-          o3-mini:
-            deploymentName: o3-mini
+    - group: "region"
+      apiKey: "${AZURE_API_KEY_v1}"
+      instanceName: "${AZURE_API_INSTANCE_V1}"
+      version: "2024-12-01-preview"
+      baseURL: "https://${AZURE_API_INSTANCE_V1}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}"
+      models:
+        gpt-4.1:
+          deploymentName: "gpt-4.1"
+        o3-mini:
+          deploymentName: "o3-mini"
