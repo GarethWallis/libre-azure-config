@@ -8,6 +8,7 @@ endpoints:
         apiKey: "${AZURE_API_KEY_v1}"
         instanceName: "${AZURE_API_INSTANCE_V1}"
         version: "2024-12-01-preview"
+        baseURL: "https://${AZURE_API_INSTANCE_V1}.cognitiveservices.azure.com/"
         models:
           gpt-4.1:
             deploymentName: gpt-4.1
